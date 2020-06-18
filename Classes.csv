@@ -1,7 +1,57 @@
 Class Name,Class Code,Grade,ECTS,Semester
-Linear Algebra,ICE-1002,5,4,1
-Diacrete Mathematics,ICE-1005,7,5,1
-Introduction to Computer Science,ICE-1003,7,5,1
-Mathematical Analysis I,ICE-1001,6,5,1
-Programming of Computers,ICE-1004,8.6,6,1
-Physics	,ICE-1006,5,5,1
+Linear Algebra,ICE-1002,,4,1
+Discrete Mathematics,ICE-1005,,5,1
+Introduction to Computer Science,ICE-1003,,5,1
+Mathematical Analysis I,ICE-1001,,5,1
+Programming of Computers,ICE-1004,,6,1
+Physics,ICE-1006,,5,1
+Theory of Circuits,ICE-2006,,5,2
+Probability and Statistics,ICE-2002,,4,2
+Algorithms design analysis,ICE-2001,,5,2
+Digital Design,ICE-2005,,5,2
+Mathematical Analysis II,ICE-2003,,5,2
+Object Oriented Programming,ICE-2004,,6,2
+Algorithms and Complexity,ICE-3001,,5,3
+Electronics,ICE-3002,,5,3
+Data Structures,ICE-3003,,5,3
+Computer Networks I,ICE-3004,,5,3
+Operating Systems I,ICE-3005,,5,3
+Computer Architecture,ICE-3006,,5,3
+Databases I,ICE-4001,,5,4
+Computer Networks II,ICE-4002,,4,4
+Operating Systems II,ICE-4003,,4,4
+Software Developing Methologies,ICE-4004,,5,4
+Digital Circuit Design,ICE-4005,,5,4
+Signals and Systems,ICE-4006,,5,4
+Technical Text,ICE-4007,,2,4
+Databases II,ICE-5001,,5,5
+Web Programming,ICE-5002,,5,5
+Analysis and Design of IT Systems,ICE-5003,,5,5
+Artificial Intelligence,ICE-5004,,5,5
+Digital Signal Processing,ICE-5005,,5,5
+Introduction to Parallel Computing,ICE-5006,,5,5
+Software Engineering,ICE-6001,,5,6
+Security of IT Services,ICE-6002,,5,6
+Computer Compiler,ICE-6003,,5,6
+Microelectronics,ICE-6004,,5,6
+Distributed Systems,ICE-6005,,5,6
+Digital Communications,ICE-6006,,5,6
+Technology of Computer Systems,ICE-7001,,5,7
+Theory of Calculation,ICE-7002,,5,7
+1st Compulsory elective course,,,5,7
+2nd Compulsory elective course,,,5,7
+1st Elective Course,,,5,7
+2nd Elective Course,,,5,7
+3rd Compulsory elective course,,,5,8
+4th Compulsory elective course,,,5,8
+3rd Elective Course,,,5,8
+4th Elective Course,,,5,8
+5th Elective Course,,,5,8
+6th Elective Course,,,5,8
+7th Elective Course,,,5,9
+8th Elective Course,,,5,9
+9th Elective Course,,,5,9
+10th Elective Course,,,5,9
+11th Elective Course,,,5,9
+12th Elective Course,,,5,9
+Dissertation,,,30,10
