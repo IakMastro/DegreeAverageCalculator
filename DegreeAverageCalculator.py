@@ -15,7 +15,7 @@ if __name__ == "__main__":
     for class_data in classes_data:
         if isnan(class_data[2]):
             continue
-        
+
         grade = class_data[2]
         ects = class_data[3]
         semester = class_data[4] - 1

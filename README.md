@@ -1,43 +1,45 @@
 # DegreeAverageCalculator
-A calculator of the degree average for ICE Uniwa. It is made because in our department there is no indication of what is the current
-degree average, and some people would like to know. If you want to use it on your department, then just fork it, change the 
-necessary stuff from the code and put your department's classes in the csv files insted. The rest of the README.md will be in
-greek.
 
-# ΟΔΗΓΙΕΣ
-Ανοίχτε το csv αρχείο και γράψτε σε κάθε μάθημα που έχει περαστεί ο τελικός βαθμός σας στο Services.
-Μην ανυσηχείται για μαθημάτα που δεν έχετε περάσει, το έχω φτιάξει έτσι, ώστε να μπορεί να προσπερνάει τα μαθήματα,
-που δεν έχουν περαστεί. Μην βάλετε 0 εκεί, θα κάτετε τα πράγματα χειρότερα, και να μην βάλετε επίσης και βαθμούς κάτω του 5.
+This is a calculator for the Degree Average of a Bachelor Degree.
 
-# ΠΩΣ ΤΟ ΤΡΕΧΩ
-Για να τρέξετε το πρόγραμμα, θα πρέπει να έχετε κατεβασμένη την Python 3. Μπορείτε να την βρήτε εδώ: 
-https://www.python.org/downloads/release/python-383/, ή εάν χρησιμοποιείται WSL ή Linux μπορείται να το κατεβάσετε από το terminal
-με την εξής εντολή:
+## Requirements
+
+This app is written in Python using the numpy and pandas modules.
+To use it, they need to be installed.
+
+### Linux
 
 ```bash
-sudo apt install python3 # Για Ubuntu/Mint
-sudo pacman -S python # Για Arch/Manjaro
+sudo apt install python3 python3-pip
 ```
 
-Επισής θα χρηαστεί να κατεβάσετε και κάτι επιπλεόν, τον Package Manager της Python, το pip. Εάν χρησιμοποιείται Windows είναι ετοίμο,
-άλλα σε Linux και WSL πρέπει να ξανά κατέβει.
+Now, the latest version of Python 3 is installed, as well as the latest version of pip, which is a package manager for Python.
 
 ```bash
-sudo apt install pip3 # Για Ubuntu/Mint
-sudo pacman -S pip # Για Arch/Manjaro
+pip3 install numpy pandas
 ```
 
-Τέλος, ανοίχτε το CMD ή το Terminal της επιλογής σας και πληκτρολογήστε αυτές τις εντολές:
+Now, the program is ready to be used.
+
+### Windows
+
+To install Python in Linux, download it from [here](https://www.python.org/downloads/). Next, install numpy and pandas by opening the Command Line or Powershell and run
 
 ```bash
-pip3 install numpy pandas # Για Ubuntu/Mint
-pip install numpy pandas # Για Windows/Arch/Manjaro
+pip install numpy pandas
 ```
 
-Τέλος, πάτε στο directory που έχετε κατεβάσει τα αρχεία, ανοίχτε έκει το CMD ή το Terminal και το τρέχετε έτσι:
+## How to run
+
+The program has 2 files, DegreeAverageCalculator.py and Classes.csv. The py file is the program itself, while Classes.csv is the file in which the program reads the info. It needs to be configured. LibreOffice Calc can be used, Excel and other alternatives can work, but they are not tested. Add your grade in the third row and if it is an Elective Course and you want the extra info, add in the first row the name of the class and on the second row the class code.
+When the file is configured, use this command on the shell.
 
 ```bash
-python3 DegreeAverageCalculator.py # Για Ubuntu/Mint
-python DegreeAverageCalculator.py # Για Windows/Arch/Manjaro
+python3 DegreeAverageCalculator.py # If it's Debian/Ubuntu
+python DegreeAverageCalculator.py # If it's Windows
 ```
 
+## Disclaimer
+
+Even though this program is created for my studies, if your degree average is also calculated by the ECTS, feel free to use it as well. Otherwise, you can fork the project and change the way the degree is calculated.
+On more info on how it is created, please refer to [the documentation](README.adoc).

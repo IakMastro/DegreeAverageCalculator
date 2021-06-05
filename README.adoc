@@ -1,0 +1,84 @@
+= DegreeAverageCalculator
+:toc:
+:toc-title:
+:source-highlighter: rouge
+:source-language: python
+
+.Mantained by: Iakovos Mastrogiannopoulos
+[NOTE]
+****
+[.text-center]
+This program is made as a personal project to learn the numpy and pandas. It is also heavily relies on the University of West Attica's department Informatics and Computer Engineering. No info that can't be viewed publicly is used.
+****
+
+== Why was this made?
+
+This was made in a time that the website in which grades were announced didn't have a degree average anywhere in the system. The only way to actually see the average was either by macros in Excel or this way. In the first version, there were no Pandas or Numpy, so one year later they were added as well. In the future, a GUI could be made, as well as a chart to actually show the differences between each semester and the grades. That can be done with matlplotlib.
+
+== Designing
+
+In the official documentation of the University it states "`For the Degree Average, every class needs to be multiplied by the ECTS, the products needs to be added and be divided by the total of the ECTS`". Mathematically this is:
+
+image:img/equation.svg[Image]
+
+== Code
+
+To make this project, Python with numpy and pandas were used. +
+First step is to read the data from the csv file. That's where pandas becomes useful.
+
+[source]
+--
+classes = pd.read_csv("Classes.csv")
+--
+
+Then, the data that is read from the program is converted to a dataframe, using the numpy library.
+
+[source]
+--
+classes_data = np.array(classes)
+--
+
+Now, the data that was extracted from the file can finally be analysed and used on the program. +
+Though, before any analysis happens from the file, some parameters needs to be initialized.
+
+[source]
+--
+gradeSum = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+ectsSum = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+totalGradeSum = 0.0
+totalEctsSum = 0.0
+--
+
+This way, each semester has it own average and that way in the future they can be plotted together and show the progress of the student that uses the program. +
+Afterwards, the data from the dataframe is being read, using a for loop.
+
+[source]
+--
+for class_data in classes_data:
+    if isnan(class_data[2]):
+        continue
+
+    grade = class_data[2]
+    ects = class_data[3]
+    semester = class_data[4] - 1
+
+    gradeSum[semester] += grade * ects
+    ectsSum[semester] += ects
+--
+
+The second line "`isnan`" checks if the grade exists. If it doesn't exist, then it skips this class. That way, the program can be dynamic. +
+Lastly, the calculations for the grade is occurred. This is a very simple beginner algorithm that is taken out of the mathematical form that was given.
+
+[source]
+--
+for semester in range(10):
+    if gradeSum[semester] == 0.0:
+        continue
+
+    totalEctsSum += ectsSum[semester]
+    totalGradeSum += gradeSum[semester]
+    print(f"{semester + 1} Semester average: {gradeSum[semester] / ectsSum[semester]}")
+
+average = totalGradeSum / totalEctsSum
+print(f"Total average is: {average}")
+--
