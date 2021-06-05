@@ -42,4 +42,4 @@ python DegreeAverageCalculator.py # If it's Windows
 ## Disclaimer
 
 Even though this program is created for my studies, if your degree average is also calculated by the ECTS, feel free to use it as well. Otherwise, you can fork the project and change the way the degree is calculated.
-On more info on how it is created, please refer to [the documentation](README.adoc).
+On more info on how it is created, please refer to [the documentation](documentation.adoc).
