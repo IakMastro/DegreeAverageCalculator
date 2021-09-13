@@ -9,14 +9,17 @@ if __name__ == "__main__":
 
     semesters = np.unique(classes['Semester'])
 
-    gradeSum = np.zeros(len(semesters))
-    ectsSum = np.zeros(len(semesters))
+    grade_sum = np.zeros(len(semesters))
+    ects_sum = np.zeros(len(semesters))
 
     for i, s in enumerate(semesters):
-        gradeSum[i] = np.sum(classes.where(classes['Semester'] == s)['Grade']
-                             * classes.where(classes['Semester'] == s)['ECTS'])
-        ectsSum[i] = np.sum(classes.where(classes['Semester'] == s)['ECTS'])
-        print(f"{s} Semester average: {round(gradeSum[i] / ectsSum[i], 2)}")
+        if np.isnan(s):
+            continue
 
-    average = np.sum(gradeSum) / np.sum(ectsSum)
+        grade_sum[i] = np.sum(classes.where(classes['Semester'] == s)['Grade']
+                             * classes.where(classes['Semester'] == s)['ECTS'])
+        ects_sum[i] = np.sum(classes.where(classes['Semester'] == s)['ECTS'])
+        print(f"{s} Semester average: {round(grade_sum[i] / ects_sum[i], 2)}")
+
+    average = np.sum(grade_sum) / np.sum(ects_sum)
     print(f"Total average is: {round(average, 2)}")
